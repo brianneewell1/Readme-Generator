@@ -13,3 +13,44 @@ const questions = [
 			return 'Please enter a valid first and last name.';
 		},
 	},
+    {
+		//Email
+		type: 'input',
+		message: 'Enter your email',
+		name: 'email',
+		validate: function(email) {
+			let pass = email.match(/\S+@\S+\.\S+/g);
+			if (pass) {
+				return true;
+			}
+
+			return 'Please enter a valid email.';
+		},
+	},
+	{
+		//Github Username
+		type: 'input',
+		message: 'Enter your github username',
+		name: 'username',
+		validate: function(username) {
+			if (username) {
+				return true;
+			}
+
+			return 'A github username is required';
+		},
+	},
+	{
+		//Repo name
+		type: 'input',
+		message: 'Enter the name for your Github Repository',
+		name: 'repo',
+		validate: function(repo) {
+			if (repo) {
+				return true;
+			}
+
+			return 'A github repository is required';
+		},
+	},
+	
