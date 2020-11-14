@@ -142,4 +142,17 @@ const questions = [
 			return 'Please provide a user story for your project';
 		},
 	},
+	{
+		//Technologies used
+		type: 'input',
+		message: 'List the technologies used in your project. (* Use comma "," to separate each technology)',
+		name: 'technologies',
+		validate: function(tech) {
+			if (tech) {
+				return true;
+			}
+
+			return 'Please provide a list of the technologies used';
+		},
+	},
 	
