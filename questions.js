@@ -53,4 +53,11 @@ const questions = [
 			return 'A github repository is required';
 		},
 	},
+	{
+		//Additional Links
+		type: 'confirm',
+		name: 'isLinks',
+		message: 'Would you like to add additional project links?',
+		default: false,
+	},
 	
