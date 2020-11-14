@@ -12,3 +12,7 @@ const template = require('./lib/template')
 
 // Wrap fs.writeFile inside util.promisify
 const writeFile = promisify(writeFile);
+
+// First Message
+console.log('This is a Github README generator');
+
