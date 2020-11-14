@@ -80,4 +80,24 @@ const questions = [
 			}
 		},
 	},
+	{
+		//Project Title
+		type: 'input',
+		message: 'Enter your project title',
+		name: 'title',
+		validate: function(title) {
+			if (title) {
+				return true;
+			}
+
+			return 'A project title is required';
+		},
+	},
+	{
+		//Screenshots and Demo
+		type: 'confirm',
+		name: 'screenshots',
+		message: 'Would you like to add screenshots or a demo to your README?',
+		default: false,
+	},
 	
