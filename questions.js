@@ -100,4 +100,46 @@ const questions = [
 		message: 'Would you like to add screenshots or a demo to your README?',
 		default: false,
 	},
+	{
+		// Get images or URL
+		type: 'input',
+		name: 'imageURL',
+		message: 'Enter the image paths or url for your screenshot or demo. (* Use comma "," to separate each path or url)',
+		when: function(answers) {
+			return answers.screenshots !== false;
+		},
+		validate: function(imageURL) {
+			if (imageURL) {
+				return true;
+			}
+
+			return 'Please add the image path or URL to attach screenshots or a demo';
+		},
+	},
+	{
+		//Project objective
+		type: 'input',
+		message: 'What is your project objective?',
+		name: 'objective',
+		validate: function(objective) {
+			if (objective) {
+				return true;
+			}
+
+			return 'Please provide an objective for your project';
+		},
+	},
+	{
+		// Project user-story
+		type: 'input',
+		message: 'Provide the User Story for your project',
+		name: 'userStory',
+		validate: function(userstory) {
+			if (userstory) {
+				return true;
+			}
+
+			return 'Please provide a user story for your project';
+		},
+	},
 	
