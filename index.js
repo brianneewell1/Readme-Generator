@@ -16,3 +16,8 @@ const writeFile = promisify(writeFile);
 // First Message
 console.log('This is a Github README generator');
 
+//Function for user questions
+function userQ() {
+	return prompt(questions);
+}
+
