@@ -144,24 +144,4 @@ inquirer.prompt([
 		],
 	},
 ])
-	.then(function (data) {
-		const fileName = `./READMEs/${data.title}.md`;
-		const author = data.author;
-		const description = data.description;
-		const install = data.install;
-		const email = data.email;
-		const github = data.username;
-		const repoName = data.repo;
-		const addLinks = data.addLinks;
-		const projLinks = data.projectLinks;
-		const screenshots = data.screenshots;
-		const image = data.imageURL;
-		const objective = data.objective;
-		const userStory = data.userStory;
-		const technologies = data.technologies;
-		const tests = data.test;
-		const license = data.license;
-
-		
-	}
-	)
+	
