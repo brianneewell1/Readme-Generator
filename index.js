@@ -143,8 +143,8 @@ inquirer.prompt([
 		],
 	},
 ])
-	.then((data) => {
-		const readmeName = `./READMEs/${data.title}.md`;
+	.then(function (data) {
+		const fileName = `./READMEs/${data.title}.md`;
 		const author = data.author;
 		const description = data.description;
 		const install = data.install;
@@ -153,12 +153,61 @@ inquirer.prompt([
 		const repoName = data.repo;
 		const addLinks = data.addLinks;
 		const projLinks = data.projectLinks;
-const screenshots = data.screenshots;
+		const screenshots = data.screenshots;
 		const image = data.imageURL;
 		const objective = data.objective;
 		const userStory = data.userStory;
 		const technologies = data.technologies;
 		const tests = data.test;
 		const license = data.license;
+
+		//Name of Project
+		$(fileName)
+
+		//Author
+		$(author)
+
+		//Description of Project
+		$(description)
+
+		//installation instructions
+		$(install)
+
+		//email
+		$(email)
+
+		//github username
+		$(username)
+
+		//Repository Name
+		$(data.repo)
+
+		//Additional Link Q
+		$(addLinks)
+
+		//Extra project links
+		$(projectLinks)
+
+		//Screenshots
+		$(screenshots)
+
+		//Images
+		$(image)
+
+		//Project Objective
+		$(objective)
+
+		//User Story
+		$(userStory)
+
+		//Technologies Used
+		$(technologies)
+
+		//Instructions on how to test project
+		$(tests)
+
+		//Project License
+		$(license)
+
 	}
 	)
