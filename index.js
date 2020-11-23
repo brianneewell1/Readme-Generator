@@ -2,6 +2,7 @@
 //Import inquirer and node modules
 const inquirer = require('inquirer');
 const fs = require('fs');
+const createFile = require('./utils/generateMarkdown');
 
 // Get the current year
 let year = new Date().getFullYear();
@@ -161,53 +162,6 @@ inquirer.prompt([
 		const tests = data.test;
 		const license = data.license;
 
-		//Name of Project
-		$(fileName)
-
-		//Author
-		$(author)
-
-		//Description of Project
-		$(description)
-
-		//installation instructions
-		$(install)
-
-		//email
-		$(email)
-
-		//github username
-		$(username)
-
-		//Repository Name
-		$(data.repo)
-
-		//Additional Link Q
-		$(addLinks)
-
-		//Extra project links
-		$(projectLinks)
-
-		//Screenshots
-		$(screenshots)
-
-		//Images
-		$(image)
-
-		//Project Objective
-		$(objective)
-
-		//User Story
-		$(userStory)
-
-		//Technologies Used
-		$(technologies)
-
-		//Instructions on how to test project
-		$(tests)
-
-		//Project License
-		$(license)
-
+		
 	}
 	)
