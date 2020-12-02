@@ -1,0 +1,26 @@
+{
+  "name": "Readme-Generator",
+  "version": "1.0.0",
+  "description": "# User Story AS a developer I want a README generator so that I can quickly create a professional README for a new project",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "inquirer": "^7.3.3",
+    "markdown-generator": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianneewell1/Readme-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianneewell1/Readme-Generator/issues"
+  },
+  "homepage": "https://github.com/brianneewell1/Readme-Generator#readme"
+}
