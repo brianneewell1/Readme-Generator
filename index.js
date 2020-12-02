@@ -7,10 +7,10 @@ const axios = require("axios");
 
 inquirer.prompt([
 	{
-		//Author
+		//Project Name
 		type: 'input',
 		name: 'projectName',
-		message: 'What is the nameof the project?',
+		message: 'What is the name of the project?',
 	},
 	{
 		//Email
@@ -23,6 +23,43 @@ inquirer.prompt([
 		type: 'input',
 		name: 'description',
 		message: 'Enter a description of your app',
+	},
+	{
+		//Installation Instructions
+		type: 'input',
+		name: 'install',
+		message: 'Enter installation instructions',
+	},
+	{
+		//Github Username
+		type: 'input',
+		name: 'gitHubusername',
+		message: 'Enter your github username',
+	},
+	{
+		// Get images or URL
+		type: 'input',
+		name: 'imageURL',
+		message: 'Enter the image paths or url for your screenshot or demo. (* Use comma "," to separate each path or url)',
+	},
+	{
+		// Project user-story
+		type: 'input',
+		name: 'userStory',
+		message: 'Provide the User Story for your project',
+	},
+	{
+		//Technologies used
+		type: 'input',
+		name: 'technologies',
+		message: 'List the technologies used in your project. (* Use comma "," to separate each technology)',
+	},
+	{
+		// Tests
+		type: 'input',
+		name: 'test',
+		message: 'How can your project be tested?',
+		default: 'npm test'
 	},
 	{
 		// License
