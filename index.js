@@ -24,7 +24,7 @@ inquirer.prompt([
 		name: 'description',
 		message: 'Enter a description of your app',
 	},
-		{
+	{
 		//Github Username
 		type: 'input',
 		name: 'gitHubUsername',
@@ -62,27 +62,38 @@ inquirer.prompt([
 		message: 'Please select a license for your project.',
 		choices: ["MIT", "GNU GPLv3", "GNU AGPLv3", "GNU LGPLv3", "APACHE 2.0", "Mozilla Public 2.0"]
 	},
-	])
-	.then(function(response) {
-	//console.log(response);
-	axios.get(`https://api.github.com/users/${response.projectName}`)
-		 .then(function (data) {
-			const readmeMD = `
-			${response.userStory}
-			${response.description}
-			${response.technologies}
-			${response.imageURL}
-				${response.email}
-				${response.gitHubUsername}
-				${response.license}				
+])
+	.then(function (response) {
+		//console.log(response);
+		axios.get(`https://api.github.com/users/${response.projectName}`)
+			.then(function (data) {
+				const readmeMD = `
+# ${response.projectName}
+## Table of Contents
+	* [User Story](#userStory)
+	* [Description](#description)
+	* [Technologies](#technologies)
+	* [Contact](#contact)
+## User Story
+	${response.userStory}
+## Description
+	${response.description}
+## Technologies
+	${response.technologies}
+## Demo
+	${response.imageURL}
+## Contact
+	Email: [${response.email}]
+	GitHub Profile: [${response.gitHubUsername}]
+## License
+	[![License](${response.license})]			
 			 `;
-
-			fs.writeFile("README.md", readmeMD, (err) => {
-				if(err) {
-					console.log(err);
-				}else {
-					console.log("Your ReadMe.md has been successfully created!")
-				}
-			 });
-		 });
-})
+				fs.writeFile("README.md", readmeMD, (err) => {
+					if (err) {
+						console.log(err);
+					} else {
+						console.log("Your ReadMe.md has been successfully created!")
+					}
+				});
+			});
+	})
