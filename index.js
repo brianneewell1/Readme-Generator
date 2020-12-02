@@ -24,16 +24,10 @@ inquirer.prompt([
 		name: 'description',
 		message: 'Enter a description of your app',
 	},
-	{
-		//Installation Instructions
-		type: 'input',
-		name: 'install',
-		message: 'Enter installation instructions',
-	},
-	{
+		{
 		//Github Username
 		type: 'input',
-		name: 'gitHubusername',
+		name: 'gitHubUsername',
 		message: 'Enter your github username',
 	},
 	{
@@ -74,9 +68,13 @@ inquirer.prompt([
 	axios.get(`https://api.github.com/users/${response.projectName}`)
 		 .then(function (data) {
 			const readmeMD = `
+			${response.userStory}
+			${response.description}
+			${response.technologies}
+			${response.imageURL}
 				${response.email}
-				${response.description}
-				${response.license}
+				${response.gitHubUsername}
+				${response.license}				
 			 `;
 
 			fs.writeFile("README.md", readmeMD, (err) => {
